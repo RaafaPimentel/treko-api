@@ -27,7 +27,8 @@ export default {
             }
 
             if (err.name === 'MongoError') {
-                return res.status(409).json(err)
+                return res.status(409).json({'msg' : 'Erro ao inserir registro'})
+
             }
 
             return res.status(500).json(err)
